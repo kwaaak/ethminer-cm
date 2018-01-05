@@ -1081,6 +1081,7 @@ private:
 	unsigned m_cudaDevices[16];
 	unsigned m_numStreams = ethash_cuda_miner::c_defaultNumStreams;
 	unsigned m_cudaSchedule = 4; // sync
+	unsigned m_optimizationKernel = 1;
 #endif
 	unsigned m_dagLoadMode = 0; // parallel
 	unsigned m_dagCreateDevice = 0;
