@@ -280,21 +280,7 @@ public:
 					break;
 				}
 			}
-<<<<<<< HEAD
-		else if ((arg == "--eth-intensity" || arg == "-eint") && i + 1 < argc) {
-			try {
-				m_ethereumAsmIntensity = stol(argv[++i]);
-			}
-			catch (...)
-			{
-				cerr << "Bad " << arg << " option: " << argv[i] << endl;
-				BOOST_THROW_EXCEPTION(BadArgument());
-			}
-		}
-		else if(arg == "--cl-threads-per-hash" && i + 1 < argc) {
-=======
 		else if(arg == "--cl-parallel-hash" && i + 1 < argc) {
->>>>>>> 28de0e241b56ce33acdab798a096d93d9d96e084
 			try {
 				m_openclThreadsPerHash = stol(argv[++i]);
 				if(m_openclThreadsPerHash != 1 && m_openclThreadsPerHash != 2 &&
@@ -815,12 +801,7 @@ private:
 #endif
 		
 		f.setSealers(sealers);
-<<<<<<< HEAD
-		
-		
-=======
 
->>>>>>> 28de0e241b56ce33acdab798a096d93d9d96e084
 		if (_m == MinerType::CL)
 			f.start("opencl", false);
 		else if (_m == MinerType::CUDA)
